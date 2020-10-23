@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <p>home page</p>
+    <button class="btn btn-danger">Test</button>
   </div>
 </template>
 
