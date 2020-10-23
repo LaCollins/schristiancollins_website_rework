@@ -1,14 +1,26 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <Banner />
     <router-view/>
   </div>
 </template>
 
+<script>
+import Banner from '@/components/Banner.vue';
+
+export default {
+  components: {
+    Banner,
+  },
+};
+</script>
+
 <style lang="scss">
+body {
+  background-image: url('./assets/images/bg-curtains.jpg');
+  background-size: fill;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -22,11 +34,15 @@
 
   a {
     font-weight: bold;
-    color: #2c3e50;
+    color: #fff;
+    text-decoration: none;
 
     &.router-link-exact-active {
-      color: #42b983;
+      color: rgb(131, 131, 131);
     }
+  }
+  a:hover {
+    color: rgb(175, 108, 108);
   }
 }
 </style>
